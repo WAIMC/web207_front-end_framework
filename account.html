@@ -1,0 +1,181 @@
+ <!-- Page Header -->
+ <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Contact Me</h1>
+            <span class="subheading">Have questions? I have answers.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row" ng-show="!success">
+      <div class="col-sm-6">
+        <h1 class="text-center text-dark">Login</h1>
+        <form name="login">
+          <div class="form-group">
+            <label for="user_name">User Name</label>
+            <input type="text" required min="3" ng-model="username"
+              class="form-control" name="username" id="user_name" aria-describedby="helpId" placeholder="user name">
+            <span ng-show="login.username.$invalid"  class="text-danger form-text " style="color:red;">input your name</span>
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label>
+            <input type="password" required min="3" max="15" ng-model="pass"
+              class="form-control" name="pass" id="pass" aria-describedby="helpId" placeholder="Password">
+            <span ng-show="login.pass.$invalid"  class=" text-danger form-text" style="color:red;">input your password</span>
+          </div>
+          <button class="btn btn-info" ng-click="login_acc()">Login</button>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <h1 class="text-center text-dark">Register</h1>
+        <form name="register">
+          <div class="form-group">
+            <label for="re_user_name">User Name</label>
+            <input type="text" required min="3" ng-model="re_username"
+              class="form-control" name="re_username" id="re_user_name" aria-describedby="helpId" placeholder="user name">
+              <span ng-show="register.re_username.$invalid"  class="text-danger form-text">input your name</span>
+            </div>
+          <div class="form-group">
+            <label for="passord">Password</label>
+            <input type="password" required min="3" ng-model="password"
+              class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="Password">
+              <span ng-show="register.password.$invalid"  class="text-danger form-text">input your password</span>
+          </div>
+          <div class="form-group">
+            <label for="full_name">Full name</label>
+            <input type="text" required min="3" ng-model="full_name"
+              class="form-control" name="full_name" id="full_name" aria-describedby="helpId" placeholder="full Name">
+              <span ng-show="register.full_name.$invalid"  class="text-danger form-text">input your full name</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" required min="3" ng-model="email"
+              class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Email">
+              <span ng-show="register.email.$invalid"  class="text-danger form-text">input your email</span>
+          </div>
+          <button class="btn btn-info" ng-click="Register()">Register</button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="row" ng-show="success">
+      <div id="accordion" style="margin: auto;width: 100%;">
+        <div class="card ">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Profile
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <form name="profile">
+                <div class="form-group">
+                  <label for="">Username</label>
+                  <input type="text" required
+                    class="form-control" ng-model="changeInfo_username" name="changeInfo_username" id="" aria-describedby="helpId" placeholder="">
+                  <small ng-show="profile.changeInfo_username.$invalid" class="form-text text-muted">input your name</small>
+                </div>
+                <div class="form-group">
+                  <label for="">password</label>
+                  <input type="password" required
+                    class="form-control" ng-model="changeInfo_password" name="changeInfo_password" id="" aria-describedby="helpId" placeholder="">
+                  <small ng-show="profile.changeInfo_password.$invalid" class="form-text text-muted">input your password</small>
+                </div>
+                <div class="form-group">
+                  <label for="">full name</label>
+                  <input type="text" required
+                    class="form-control" ng-model="changeInfo_full_name" name="changeInfo_full_name" id="" aria-describedby="helpId" placeholder="">
+                  <small ng-show="profile.changeInfo_full_name.$invalid" class="form-text text-muted">input your full name</small>
+                </div>
+                <div class="form-group">
+                  <label for="">email</label>
+                  <input type="email" required
+                    class="form-control" ng-model="changeInfo_email" name="changeInfo_email" id="" aria-describedby="helpId" placeholder="">
+                  <small ng-show="profile.changeInfo_email.$invalid" class="form-text text-muted">input your name</small>
+                </div>
+                <button class="btn btn-success" ng-click="change_info()">Change info</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Change password
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <form name="change_pass">
+                <input type="hidden" ng-model="change_username" name="change_username">
+                <input type="hidden" ng-model="change_full_name" name="change_full_name">
+                <input type="hidden" ng-model="change_email" name="change_email">
+                <div class="form-group">
+                  <label for="">old password</label>
+                  <input type="password" required
+                    class="form-control" ng-model="old_password" name="old_password" id="" aria-describedby="helpId" placeholder="">
+                  <small ng-show="change_pass.old_password.$invalid" class="form-text text-muted">input your password</small>
+                </div>
+                <div class="form-group">
+                  <label for="">New Password</label>
+                  <input type="password" required
+                    class="form-control" ng-model="new_pass" name="new_pass" id="" aria-describedby="helpId" placeholder="">
+                  <small ng-show="change_pass.new_pass.$invalid" class="form-text text-muted">input your new password</small>
+                </div>
+                <button class="btn btn-success" ng-click="change_password()">Change info</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Show history
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Subject Name</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="item in list_subject_history">
+                    <td scope="row">{{item.user}}</td>
+                    <td>{{item.subject_name}}</td>
+                    <td>{{item.score}}</td>
+                    <td>{{item.date}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="btn btn-default" ng-click="logout_acc()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

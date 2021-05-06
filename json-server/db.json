@@ -1,0 +1,74 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "test",
+      "password": "123",
+      "full_name": "sadsad",
+      "email": "sadasd"
+    },
+    {
+      "id": 2,
+      "username": "test",
+      "password": "123456",
+      "full_name": "sadasd",
+      "email": "sadsa@gmail.com"
+    },
+    {
+      "id": 3,
+      "username": "haha",
+      "password": "123456",
+      "full_name": "vinhdzsadas",
+      "email": "a@gmail.com"
+    },
+    {
+      "id": 4,
+      "username": "admin",
+      "password": "123",
+      "full_name": "vinh",
+      "email": "vinhdvpd04097@fpt.edu.vn"
+    }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "user": "user",
+      "user_id": 999,
+      "subject_name": "asdsa",
+      "score": 10,
+      "date": "12/2/2002"
+    },
+    {
+      "user": "test",
+      "user_id": 2,
+      "subject_name": "Điện toán đám mây",
+      "score": 3,
+      "date": "2021-04-20T02:25:31.806Z",
+      "id": 2
+    },
+    {
+      "user": "test",
+      "user_id": 2,
+      "subject_name": "Cơ sở dữ liệu",
+      "score": 2,
+      "date": "2021-04-20T02:39:25.427Z",
+      "id": 3
+    },
+    {
+      "user": "test",
+      "user_id": 2,
+      "subject_name": "Thiết kế giao diện trên Android",
+      "score": 6,
+      "date": "2021-04-20T02:41:59.140Z",
+      "id": 4
+    },
+    {
+      "user": "haha",
+      "user_id": 3,
+      "subject_name": "Cơ sở dữ liệu",
+      "score": 4,
+      "date": "2021-04-21T08:45:09.223Z",
+      "id": 5
+    }
+  ]
+}
